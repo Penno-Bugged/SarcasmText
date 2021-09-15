@@ -2,14 +2,6 @@ import java.util.*;
 
 public class Main {
 
-    static boolean pureHalf(){
-        Scanner sc= new Scanner(System.in);                 //System.in is a standard input stream
-        System.out.print("Would you prefer pure randomisation over 50:50? ");
-        String preference = sc.nextLine();                  //Reads string
-        return preference.equalsIgnoreCase("y") || preference.equalsIgnoreCase("yes");
-    }
-
-
     /**
      * Method to get user input
      * Checks accuracy by immediately outputting the string
@@ -43,7 +35,7 @@ public class Main {
 
 
     /**
-     * main Method
+     * Main Method
      * @param args None - no console call
      */
     public static void main(String[] args) {
