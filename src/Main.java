@@ -26,24 +26,6 @@ public class Main {
 
 
     /**
-     * Method to randomise capitalisation and to perform this action
-     * @param text - the string from the userInput method
-     * @return Returns a string with the changes already made
-     */
-    static String pureRandom(String text) {
-        List<String> textList = new ArrayList<>();          //Creates list array to store characters
-        Random status = new Random();                       //Creates Random object to be updated with coin toss
-        String[] arrOfStr = text.split("", 0);   //Separates the string at each character
-        for (String a : arrOfStr) {
-            boolean random = status.nextBoolean();          //Sets random Boolean value
-            if (random) {
-                textList.add(a.toUpperCase());
-            } else textList.add(a);
-        }
-        return String.join("", textList);           //Returns the string to main();
-    }
-
-    /**
      * Method to alternate capitalisation and perform this action
      * @param text - the string from the userInput method
      * @return Returns a string with the changes already made
@@ -62,14 +44,9 @@ public class Main {
 
     /**
      * main Method
-     * @param args Not sure
+     * @param args None - no console call
      */
     public static void main(String[] args) {
-        String input = userInput();                         //Stores user input as a string
-        if (pureHalf()){
-            System.out.println(pureRandom(input));          //Prints the output string with pure random capitalisation
-        } else{
-            System.out.println(halfRandom(input));              //Prints the output string swapping capitalisation
-        }
+        System.out.println(halfRandom(userInput()));          //Prints the output string with pure random capitalisation
     }
 }
